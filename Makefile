@@ -29,7 +29,7 @@ deploy:
 
 package:
 	pip install -U hatch
-	cd frontend;yarn install;yarn build
+# 	cd frontend;yarn install;yarn build
 	hatch build
 
 devjs:
