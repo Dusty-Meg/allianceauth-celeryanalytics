@@ -37,6 +37,7 @@ PASSWORD_HASHERS = [
 ESI_SSO_CLIENT_ID = '123'
 ESI_SSO_CLIENT_SECRET = '123'
 ESI_SSO_CALLBACK_URL = '123'
+ESI_USER_CONTACT_EMAIL = "123@123.com"
 
 CACHES = {
     "default": {
@@ -52,3 +53,4 @@ CACHES = {
         }
     }
 }
+
