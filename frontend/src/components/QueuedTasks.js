@@ -20,7 +20,7 @@ export const QueuedTasks = () => {
   Object.keys(data).forEach((key) => {
     let q = key.split("\u0006\u0016");
     console.log(q);
-    const prio = typeof q[1] === "undefined" ? 0 : q[1];
+    const prio = typeof q[1] === "undefined" ? "default" : q[1];
     if (!(q[0] in data_tree)) {
       data_tree[q[0]] = {};
     }

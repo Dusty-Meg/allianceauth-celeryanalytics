@@ -33,9 +33,9 @@ def cache_page_data(f):
     tags=["Admin"]
 )
 def get_queue_status(request):
-    pending = {}
     if not request.user.is_superuser:
         return 403, "Permission Denied!"
+    pending = {}
     with app_or_default(None) as celery_app:
         try:
             que = [getattr(settings, 'CELERY_DEFAULT_QUEUE', 'celery')]
@@ -68,6 +68,9 @@ def get_queue_status(request):
                                     _pending.values(), key=lambda d: d['total'], reverse=True)
                         except TypeError as e:
                             pass
+            print(que)
+            print(routes)
+            print(prio_steps)
         except AttributeError as e:
             pass
 
